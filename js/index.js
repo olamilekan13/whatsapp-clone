@@ -33,8 +33,8 @@ users.forEach(function(obj){
     let text = obj.text;
     let newMsg = obj.newMsg;
     let time = obj.time;
-    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='https://api.sololearn.com/Uploads/Avatars/"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" 
-    +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";
+    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='image/Robot//"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" 
+    +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";                                                          
 })
 
 // Status stories random user from chat
