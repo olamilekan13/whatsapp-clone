@@ -19,13 +19,13 @@ let users = [
 let wallpaperTheme = ["https://dl.dropbox.com/s/748lrepgl77hlfm/asmani.jpeg","https://dl.dropbox.com/s/8td2sl0fmzlqco0/begani.jpeg","https://dl.dropbox.com/s/41cjs3au49pknx3/brown.jpeg","https://dl.dropbox.com/s/l0vzlor1hewn00l/green.jpeg", "https://dl.dropbox.com/s/qoa0pulm1eywiy4/light%20yellow.jpeg","https://dl.dropbox.com/s/nyjckrrtr69hvkm/red.jpeg","https://dl.dropbox.com/s/nnzxthjp4kb40fa/theme-black.jpeg","https://dl.dropbox.com/s/s69y25xkgo2zk4i/theme-blue.jpeg"]
 
 // Auto response Messages 
-let abc=[""]
-let hi=["hello 😘😘🥰","hello 😅😅","hello 😆🤣😂","Hello, Tell me something about you :)","Hello Darling♥️","Hi Beta😂","Hello Bete🤣"];
-let no=["no problem","Koi gal ni oye!","koi nhi","Thik hai", "Thik hai"];
-let what=["Nothing🤣","Nothing","Kuch nhi😂","Kuch nhi oye!","Kya 'what' ek baar mein sunne ki aadat daal le😏"];
-let blank=["ek bar bolne par samj nhi ata kia ? ? ", "i said! do not send blank message", "Khuch likh le yaar", "write something yaar like : I love you 😘😅", "please do not blank 😏"];
-let welcome = ["Nice to meet you dear :)","Welcome ! <br> mujhe pata tha apko meri yaad yaha khinch layegi 😆😅", "hey Cute dude 🥰", "ayein apka swagat hai in my heart ;)"];
-let intro = ["I am Robot 2.0", "I am Robot 2.0 created by <strong> <span style='color:red'>Dont Knew</span></strong>.", "I am technical Robot", "My owner name is  🥰 <strong> <span style='color:red'>Dont Knew</span></strong>."];
+let abc=["How do you think we can help increase our services to you. <quote> <b> Happy new Year in advance </b> <quote>", "How may we help you? <quote> <b> Happy new Year in advance </b> <quote>"]
+let hi=["hello Ma 😘😘🥰","hello dear😅😅","hello world 😆🤣😂","Hello, Tell me something about you :)","Hello Darling♥️","Hi Beta😂","Hello Bete🤣"];
+let no=["no problem","You can come back in the 2 hours","Sorry!! The service is Unavailablbe", "OOPS!!! TRY AGAIN LATER !!!"];
+let what=["What is your name nigga?🤣","Nothing","😂","😏"];
+let blank=["Please, do not send blank message", "   ", "You must write something like : I love you 😘😅", "please do not reply with blank 😏"];
+let welcome = ["Nice to meet you dear :)","Welcome ! <br> You are highly welcome to our whatsapp page 😆😅", "hey Cute dude 🥰"];
+let intro = ["My name is  Robot 2.0", "I am Robot 2.0 created by <strong> <span style='color:red'>Holarmy Tech</span></strong>.", "I am technical Robot", "My owner name is  🥰 <strong> <span style='color:purple'>Holarmy Tech</span></strong>."];
 
 users.forEach(function(obj){
     let id = obj.id;
@@ -33,7 +33,8 @@ users.forEach(function(obj){
     let text = obj.text;
     let newMsg = obj.newMsg;
     let time = obj.time;
-    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='https://api.sololearn.com/Uploads/Avatars/"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";
+    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='https://api.sololearn.com/Uploads/Avatars/"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" 
+    +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";
 })
 
 // Status stories random user from chat
