@@ -4,9 +4,9 @@ window.onload  = function(){
 }
 
 let users = [
-     {id:7920723, name:"Morenikeji Folarin", text:"Hello world!!...", time:"7:02",newMsg:1},
-     {id:2200299, name:"Omosanya Ola", text:"I appreciated:)", time:"18:56",newMsg:2},
-     {id:12272000, name:"Olaoluwa omosanya", text:"lets talk something bro ?", time:"13:02",newMsg:5},
+     {id:21346372, name:"Morenikeji Folarin", text:"Hello world!!...", time:"7:02",newMsg:1},
+     {id:23246976, name:"Omosanya Ola", text:"I appreciated:)", time:"18:56",newMsg:2},
+     {id:11681128, name:"Olaoluwa omosanya", text:"lets talk something bro ?", time:"13:02",newMsg:5},
      {id:8489802, name:"Mr Adeola", text:"help please bro...", time:"15:00",newMsg:5},
      {id:12272000, name:"Olaoluwa omosanya", text:"lets talk something bro ?", time:"13:02", newMsg:5}, 
      {id:284527, name:"Mr Sam", text:"I love you javascipt :(", time:"7:02",newMsg:12}, 
@@ -33,8 +33,8 @@ users.forEach(function(obj){
     let text = obj.text;
     let newMsg = obj.newMsg;
     let time = obj.time;
-    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='image/Robot//"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" 
-    +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";                                                          
+    document.querySelector(".w-chat").innerHTML += "<div onclick='arrayId(this)' data-chat-id = "+id+"> <div> <img src='https://api.sololearn.com/Uploads/Avatars/"+id+".jpg' alt="+name+"> </div> <div class='chat-fr'> <span> "+name+ " </span> <span>" 
+    +text+ " </span> </div> <div class='chat-date'> <span>" +time+ "</span> <span>" +newMsg+ "</span> </div></div>";
 })
 
 // Status stories random user from chat
