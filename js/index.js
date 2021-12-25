@@ -48,7 +48,9 @@ for (let i=0; i < 10; i++){
 console.log(status_users);
 for(let j = 0; j<status_users.length; j++){
     // console.log(users[j].name);
-    document.querySelector('.w-stories').innerHTML +="<div class='stories'><div><img src='https://api.sololearn.com/Uploads/Avatars/"+users[status_users[j]].id+".jpg' alt="+users[status_users[j]].name+"><i class='fas fa-plus-circle'></i></div><div class='chat-fr'><span> " + users[status_users[j]].name + " </span><span>" + users[status_users[j]].time + "</span></div></div>"; 
+    document.querySelector('.w-stories').innerHTML
+    +="<div class='stories'><div><img src='https://api.sololearn.com/Uploads/Avatars/"+users[status_users[j]].id+".jpg' alt="+users[status_users[j]].name+"><i class='fas fa-plus-circle'></i></div><div class='chat-fr'><span> " 
+    + users[status_users[j]].name + " </span><span>" + users[status_users[j]].time + "</span></div></div>"; 
 }
 
 // call tab random user from users array
@@ -60,7 +62,8 @@ for (let i=0; i < 5; i++){
     }
 }
 for(let j = 0; j<call_users.length; j++){
-    document.querySelector('.w-calls').innerHTML +="<div><div> <img src='https://api.sololearn.com/Uploads/Avatars/"+users[call_users[j]].id+".jpg' alt="+users[call_users[j]].name+"></div><div class='chat-fr'><span>" + users[call_users[j]].name + "</span><span> <i class='fas fa-long-arrow-alt-up'></i> <span> (6) Today, " + users[call_users[j]].time + " </span></span></div><div class='call-icon'><i class='fas fa-phone'></i></div></div>"; 
+    document.querySelector('.w-calls').innerHTML +="<div><div> <img src='https://api.sololearn.com/Uploads/Avatars/"+users[call_users[j]].id+".jpg' alt="+users[call_users[j]].name+"></div><div class='chat-fr'><span>" 
+    + users[call_users[j]].name + "</span><span> <i class='fas fa-long-arrow-alt-up'></i> <span> (6) Today, " + users[call_users[j]].time + " </span></span></div><div class='call-icon'><i class='fas fa-phone'></i></div></div>"; 
     // console.log(users[j].name);
 }
 
@@ -101,17 +104,17 @@ function ShowHomechat(){
         call_icon.style.visibility = "hidden";
         stories_icon.style.display = "none";
 }
-var homeChat = document.querySelector(".whole-body");
-var chatPage = document.querySelector(".chat-page");
-var textHelp = document.querySelector('.msg-left > span');
-var wallpaperBody = document.body;
-var chatBtmWallpaper = document.querySelector(".w-chat-body > .chat-bottom");
-var wallpaperTheme1 = document.querySelector(".wallpaper-theme");
-var chatPage = document.querySelector(".chat-page");
-var confirmalert = document.querySelector(".confirm-alert");
+let homeChat = document.querySelector(".whole-body");
+let chatPage = document.querySelector(".chat-page");
+let textHelp = document.querySelector('.msg-left > span');
+let wallpaperBody = document.body;
+let chatBtmWallpaper = document.querySelector(".w-chat-body > .chat-bottom");
+let wallpaperTheme1 = document.querySelector(".wallpaper-theme");
+ chatPage = document.querySelector(".chat-page");
+let confirmalert = document.querySelector(".confirm-alert");
 function arrayId(id){
     //https://api.sololearn.com/Uploads/Avatars/"+id+".jpg
-    var userUrl = id.getAttribute("data-chat-id");
+    let userUrl = id.getAttribute("data-chat-id");
     // var userId = userUrl.match(/(\d+)/i)[0];
     let userindex  = users.findIndex(x=> x.id==userUrl);
     homeChat.style.display = "none";
@@ -154,32 +157,33 @@ function changeIcon(){
 
 // chat script...
 function rand(arrayName){
-     var num = Math.floor(Math.random()*arrayName.length);
+     let num = Math.floor(Math.random()*arrayName.length);
      console.log(num);
-     var msg = arrayName[num];
+     let msg = arrayName[num];
     //  console.log(msg);
      return msg;
 }
-var messageHeader = document.querySelector(".message-header");
+let messageHeader = document.querySelector(".message-header");
 function messageWindowLoad(){
     document.querySelector(".onlineText").innerHTML = "online"
 }
 setTimeout(messageWindowLoad, 2000);
-var today = new Date();
-var time = today.getHours()+":"+today.getMinutes();
+let today = new Date();
+let time = today.getHours()+":"+today.getMinutes();
 function responseMessage(){
     messageHeader.innerHTML += '<div class="msg-right"><span> ' + textArea.value + ' <span>'+time+'</span> </span></div>';
     document.querySelector(".onlineText").innerHTML = "Typing...";
     setTimeout(function(){
     document.querySelector(".onlineText").innerHTML = "online";
-    var userMsg = textArea.value.toLowerCase(); 
-    if(userMsg == "hi" || userMsg == "hello" || userMsg == "hy" || userMsg == "hyy" || userMsg == "hii" || userMsg == "helo" || userMsg == "hi bro"){
+    let userMsg = textArea.value.toLowerCase(); 
+    if(userMsg == "hi" || userMsg == "hello" || userMsg == "hy" || userMsg == "how are you ?" 
+    || userMsg == "how are you doing?" || userMsg == "hey" || userMsg == "hi bro"){
          messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(hi) + ' <span>'+time+'</span> </span></div>';
-    }else if(userMsg == "kiya" || userMsg.match("hua")|| userMsg == "what" ){
+    }else if(userMsg == "how may i help you?" || userMsg.match("hua")|| userMsg == "what" ){
          messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(what) + ' <span>'+time+'</span> </span></div>';
-    }else if(userMsg == "no" || userMsg == "nahi" || userMsg == "never" || userMsg == "not" || userMsg == "ok" ){
+    }else if(userMsg == "no" || userMsg == "No" || userMsg == "never" || userMsg == "not" || userMsg == "ok" ){
          messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(no) + ' <span>'+time+'</span> </span></div>';
-    }else if(userMsg == "who are you" || userMsg == "name" || userMsg == "your name" || userMsg == "nam" || userMsg == "whats your name" || userMsg.match("who") || userMsg.match("name")){
+    }else if(userMsg == "who are you" || userMsg == "name" || userMsg == "your name" || userMsg == "not really" || userMsg == "whats your name" || userMsg.match("who") || userMsg.match("name")){
          messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(intro) + ' <span>'+time+'</span> </span></div>';
     }else if(userMsg == "help" || userMsg == "help me" || userMsg == "help me dear" || userMsg == "help bro"){
          messageHeader.innerHTML += '<div class="msg-left"><span><table><tr><th style="font-weight:bolder;">Type text</th></tr><tr><td>hello,hi,helo,hi</td></tr><tr><td>kiya, what </td></tr><tr><td>nahi, never, not, ok</td></tr><tr><td>nam, whats your name, who are you, name</td></tr><tr><td>blank msg send, full stop send-><strong>.</storng> </td></tr></table> <br> <strong>Note : I will improve this commanc text...</strong><span>'+time+'</span> </span></div>';
