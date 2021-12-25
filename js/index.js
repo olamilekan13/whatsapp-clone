@@ -186,7 +186,7 @@ function responseMessage(){
     }else if(userMsg == "who are you" || userMsg == "name" || userMsg == "your name" || userMsg == "not really" || userMsg == "whats your name" || userMsg.match("who") || userMsg.match("name")){
          messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(intro) + ' <span>'+time+'</span> </span></div>';
     }else if(userMsg == "help" || userMsg == "help me" || userMsg == "help me dear" || userMsg == "help bro"){
-         messageHeader.innerHTML += '<div class="msg-left"><span><table><tr><th style="font-weight:bolder;">Type text</th></tr><tr><td>hello,hi,helo,hi</td></tr><tr><td>kiya, what </td></tr><tr><td>nahi, never, not, ok</td></tr><tr><td>nam, whats your name, who are you, name</td></tr><tr><td>blank msg send, full stop send-><strong>.</storng> </td></tr></table> <br> <strong>Note : I will improve this commanc text...</strong><span>'+time+'</span> </span></div>';
+         messageHeader.innerHTML += '<div class="msg-left"><span><table><tr><th style="font-weight:bolder;">Type text</th></tr><tr><td>hello, what? </td></tr><tr><td> never, not, ok</td></tr><tr><td>whats your name, who are you,><strong>.</strong> </td></tr></table></strong><span>'+time+'</span> </span></div>';
     }else {
         messageHeader.innerHTML += '<div class="msg-left"><span> ' + rand(abc)  + ' <span>'+time+'</span> </span></div>';   
      }
@@ -212,7 +212,7 @@ var themeView = document.querySelector(".theme-view");
 function themeBright(){
     themeView.style.display = "block"
     setTimeout(function(){themeView.style.marginTop = "0";},10);
-    confirmalert.style.marginLeft = "-100%";
+    confirmalert.style.marginLeft = "-100%";iya
 } 
 function backtoWallpaperTheme(){
     themeView.style.marginTop = "-300%";
